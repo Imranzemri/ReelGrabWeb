@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0d0f15;
+  color: #e9e7e1;
+}
+
+/* Subtle grain + warm radial so the dark UI isn't flat/sloppy. */
+body {
+  background-image:
+    radial-gradient(900px 500px at 12% -8%, rgba(255, 90, 77, 0.10), transparent 60%),
+    radial-gradient(700px 600px at 100% 0%, rgba(80, 120, 255, 0.07), transparent 55%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(255, 90, 77, 0.35);
+}
+
+.field-shadow {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 20px 50px -24px rgba(0, 0, 0, 0.8);
+}
